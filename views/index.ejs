@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de contacto</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SBBY61GVSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-SBBY61GVSE');
+</script>
+
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script> 
+
+<body>
+  <form class="form" action="/" method="post">
+    <h2 class="form_title">Contacta conmigo!</h2>
+    <p class="form_paragraph">¿Desea ver mi curriculum? <a target="_blank" href="/views/cv.html" class="form_link">Pulsa aqui</a></p>
+    
+    <div class="form_container">
+
+      <a target="_blank" href="/login" class="form_contact">Registro del formulario</a></p>
+
+      <div class="form_group">
+        <input type="text" name="name" id="name" class="form_input" placeholder=" ">
+        <label for="name" class="form_label">Nombre</label>
+        <span class="form_line"></span>
+      </div>
+      <div class="form_group">
+        <input type="email" name="email" id="email" class="form_input" placeholder=" ">
+        <label for="email" class="form_label">Email</label>
+        <span class="form_line"></span>
+      </div>
+      <div class="form_group">
+        <input type="tel" name="cell" id="cell" class="form_input" placeholder=" ">
+        <label for="cell" class="form_label">Celular</label>
+        <span class="form_line"></span>
+      </div>
+      <div class="form_group">
+        <textarea name="comment" id="comment" cols="20" rows="5" class="form_input" placeholder=" "></textarea>
+        <label for="comment" class="form_label">Comentario</label>
+        <span class="form_line"></span>
+      </div>
+      <div class="form_group">
+        <div class="g-recaptcha" data-sitekey= "6Lf6RkomAAAAAJQTz7cReF5u_ncqmeckT-trRrry" ></div>
+      </div>
+      <button type="submit" class="form_submit" > Enviar </button>
+    </div>
+    
+  </form>
+</body>
+</html>
